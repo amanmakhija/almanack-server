@@ -45,6 +45,11 @@ const eventSchema = new mongoose.Schema({
 const Event = mongoose.model("Event", eventSchema);
 
 
+app.get('/', (req, res) => {
+    res.send('Server is Running Properly');
+});
+
+
 //User Routes
 app.post('/register', async (req, res) => {
     const { name, email, password } = req.body;
